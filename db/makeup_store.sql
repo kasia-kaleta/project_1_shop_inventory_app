@@ -7,7 +7,7 @@ DROP TABLE types;
 CREATE TABLE brands (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  description VARCHAR(255)
+  info VARCHAR(255)
 );
 
 CREATE TABLE categories (
