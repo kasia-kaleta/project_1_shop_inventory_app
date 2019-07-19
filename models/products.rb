@@ -14,5 +14,4 @@ class Product
     @category_id = options['category_id']
   end
 
-
 end
