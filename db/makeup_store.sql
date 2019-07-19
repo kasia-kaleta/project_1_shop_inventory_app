@@ -10,17 +10,17 @@ CREATE TABLE brands (
   description VARCHAR(255)
 );
 
-CREATE TABLE types (
+CREATE TABLE categories (
   id SERIAL4 PRIMARY KEY,
-  description VARCHAR(255)
+  name VARCHAR(255)
 );
 
 CREATE TABLE products (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   description VARCHAR(255),
-  brand_id REFERENCES brands(id),
-  type_id REFERENCES types(id),
+  brand_id INT4 REFERENCES brands(id),
+  category_id INT4 REFERENCES categories(id),
   quantity INT4,
   buying_price DECIMAL,
   selling_price DECIMAL
