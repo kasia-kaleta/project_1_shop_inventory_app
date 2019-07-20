@@ -19,5 +19,13 @@ class Brand
     @id = result.first['id']
   end
 
+  def find(id)
+    sql = "SELECT * FROM brands WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    brand = Brand.new(result)
+    return result
+  end
+
 
 end

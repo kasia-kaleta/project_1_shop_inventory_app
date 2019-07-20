@@ -8,3 +8,18 @@ class TestBrand < MiniTest::Test
 
     @brand = Brand.new(options)
   end
+
+  def test_name()
+    result = @brand.name()
+    assert_equal("Benefit", result)
+  end
+
+  def test_info()
+    result = @brand.info()
+    assert_equal("test", result)
+  end
+
+
+
+
+end
