@@ -55,8 +55,7 @@ class Product
     sql = "SELECT * FROM products WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
-    product = Product.new(result)
-    return result
+    return Product.new(result)
   end
 
 end

@@ -25,7 +25,4 @@ class TestBrand < MiniTest::Test
     assert_equal('Benefit', brand.name)
   end
 
-
-
-
 end
