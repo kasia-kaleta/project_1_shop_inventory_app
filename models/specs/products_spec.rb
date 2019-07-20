@@ -1,0 +1,19 @@
+require("minitest/autorun")
+require_relative("../products.rb")
+
+class TestProduct < MiniTest::Test
+
+  def setup
+    options = {"id" => 1, "name" => "Volume Million Lashes Mascara", "description" => "Millionizer Brush - a multitude of bristles separate lashes for a fanned-out effect. Excess Wiper - in-built wiper system removes excess mascara, wiping brush free of clumps.",
+      "quantity" => 20, "buying_cost" => 6.99, "selling_price" => 10.99, "brand_id" => 2, "category_id" => 2}
+
+      @product = Product.new(options)
+    end
+
+    def test_first_name()
+    result = @product.name()
+    assert_equal("Volume Million Lashes Mascara", result)
+  end
+
+
+  end
