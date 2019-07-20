@@ -15,5 +15,9 @@ class TestCategory < MiniTest::Test
     assert_equal("complexion", result)
   end
 
+  def test_find()
+    category = Category.find(1)
+    assert_equal('complexion', category.name)
+  end
 
 end
