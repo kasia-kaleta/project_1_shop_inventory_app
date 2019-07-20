@@ -1,6 +1,6 @@
 DROP TABLE products;
 DROP TABLE brands;
-DROP TABLE types;
+DROP TABLE categories;
 
 
 
@@ -22,6 +22,6 @@ CREATE TABLE products (
   brand_id INT4 REFERENCES brands(id),
   category_id INT4 REFERENCES categories(id),
   quantity INT4,
-  buying_price DECIMAL,
+  buying_cost DECIMAL,
   selling_price DECIMAL
 );
