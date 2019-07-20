@@ -8,6 +8,7 @@ class TestProduct < MiniTest::Test
       "quantity" => 20, "buying_cost" => 6.99, "selling_price" => 10.99, "brand_id" => 2, "category_id" => 2}
 
       @product = Product.new(options)
+      @product.save()
     end
 
     def test_first_name()
@@ -35,6 +36,20 @@ class TestProduct < MiniTest::Test
       assert_equal(10.99, result)
     end
 
+    def test_brand_id()
+      result = @product.brand_id()
+      assert_equal(2, result)
+    end
+
+    def test_category_id()
+      result = @product.category_id()
+      assert_equal(2, result)
+    end
+
+    def test_find()
+      product = Product.find(1)
+      assert_equal("Volume Million Lashes Mascara", product.name)
+    end
 
 
 
