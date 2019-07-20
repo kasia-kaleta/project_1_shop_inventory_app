@@ -19,6 +19,14 @@ class Brand
     @id = result.first['id']
   end
 
+  def self.all()
+    sql = "SELECT * FROM brands"
+    brands = SqlRunner.run( sql )
+    result = brands.map { |brand| Brand.new(brand) }
+    return result
+  end
+
+
   def find(id)
     sql = "SELECT * FROM brands WHERE id = $1"
     values = [id]
