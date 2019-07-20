@@ -13,7 +13,7 @@ class Category
 
   def save()
     sql = "INSERT INTO categories (name) VALUES ($1) RETURNING id"
-    values = [@name, @id]
+    values = [@name]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
   end

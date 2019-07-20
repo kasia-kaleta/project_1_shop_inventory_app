@@ -7,6 +7,7 @@ class TestBrand < MiniTest::Test
     options = {"id" => 1, "name" => "Benefit", "info" => "test"}
 
     @brand = Brand.new(options)
+    @brand.save()
   end
 
   def test_name()
@@ -17,6 +18,11 @@ class TestBrand < MiniTest::Test
   def test_info()
     result = @brand.info()
     assert_equal("test", result)
+  end
+
+  def test_find()
+    brand = Brand.find(1)
+    assert_equal('Benefit', brand.name)
   end
 
 

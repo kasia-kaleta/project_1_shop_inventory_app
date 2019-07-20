@@ -14,7 +14,7 @@ class Brand
 
   def save()
     sql = "INSERT INTO brands (name, info) VALUES ($1, $2) RETURNING id"
-    values = [@name, @info, @id]
+    values = [@name, @info]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
   end
@@ -49,8 +49,8 @@ class Brand
     sql = "SELECT * FROM brands WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
-    brand = Brand.new(result)
-    return result
+    return Brand.new(result)
+
   end
 
 
