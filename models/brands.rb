@@ -40,8 +40,10 @@ class Brand
     SqlRunner.run(sql, values)
   end
 
-
-
+  def self.delete_all()
+    sql = "DELETE FROM brands"
+    SqlRunner.run(sql)
+  end
 
   def self.find(id)
     sql = "SELECT * FROM brands WHERE id = $1"
