@@ -21,7 +21,7 @@ class Brand
 
   def self.all()
     sql = "SELECT * FROM brands"
-    brands = SqlRunner.run( sql )
+    brands = SqlRunner.run(sql)
     result = brands.map { |brand| Brand.new(brand) }
     return result
   end
@@ -33,8 +33,17 @@ class Brand
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM brands
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
-  def find(id)
+
+
+
+  def self.find(id)
     sql = "SELECT * FROM brands WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
