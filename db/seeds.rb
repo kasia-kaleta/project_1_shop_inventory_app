@@ -2,6 +2,12 @@ require_relative('../models/brands')
 require_relative('../models/categories')
 require_relative('../models/products')
 
+Product.delete_all()
+Brand.delete_all()
+Category.delete_all()
+
+
+
 
 brand1 = Brand.new({
   'name' => 'Benefit',
@@ -45,3 +51,5 @@ brand4 = Brand.new({
     'brand_id' => brand2.id,
     'category_id' => category2.id
     })
+
+    product1.save()

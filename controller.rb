@@ -1,0 +1,6 @@
+require('sinatra')
+require('sinatra/contrib/all')
+require_relative('models/brands')
+require_relative('models/categories')
+require_relative('models/products')
+also_reload('./models/*')
