@@ -11,9 +11,16 @@ class TestProduct < MiniTest::Test
     end
 
     def test_first_name()
-    result = @product.name()
-    assert_equal("Volume Million Lashes Mascara", result)
-  end
+      result = @product.name()
+      assert_equal("Volume Million Lashes Mascara", result)
+    end
+
+    def test_description()
+      result = @product.description()
+      assert_equal("Millionizer Brush - a multitude of bristles separate lashes for a fanned-out effect. Excess Wiper - in-built wiper system removes excess mascara, wiping brush free of clumps.", result)
+    end
+
+
 
 
   end
