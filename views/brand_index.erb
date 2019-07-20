@@ -1,0 +1,12 @@
+<h2>Brands</h2>
+
+<div id="student-wrapper">
+  <% @brands.each do |brand| %>
+
+  <div class="brand">
+    <h3><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h3>
+    <p>Brand Info: <%= brand.info %></p>
+  </div>
+
+  <% end %>
+</div>
