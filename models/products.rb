@@ -32,4 +32,11 @@ class Product
     return result
   end
 
+  def update()
+    sql = "UPDATE products SET (name, description, quantity, buying_cost, selling_price, brand_id, category_id) = ($1, $2, $3, $4, $5, $6, $7)
+    WHERE id = $8"
+    values = [@name, @description, @quantity, @buying_cost, @selling_price, @brand_id, @category_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
