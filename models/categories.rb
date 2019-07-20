@@ -1,3 +1,6 @@
+require_relative('../db/sql_runner')
+
+
 class Category
 
   attr_reader :id
