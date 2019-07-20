@@ -27,4 +27,11 @@ brand4 = Brand.new({
   brand2.save()
   brand3.save()
   brand4.save()
-  
+
+  category1 = Category.new({'name' => 'complexion'})
+  category2 = Category.new({'name' => 'eyes'})
+  category3 = Category.new({'name' => 'lips'})
+
+  category1.save()
+  category2.save()
+  category3.save()
