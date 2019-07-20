@@ -20,6 +20,11 @@ class TestProduct < MiniTest::Test
       assert_equal("Millionizer Brush - a multitude of bristles separate lashes for a fanned-out effect. Excess Wiper - in-built wiper system removes excess mascara, wiping brush free of clumps.", result)
     end
 
+    def test_quantity()
+      result = @product.quantity()
+      assert_equal(20, result)
+    end
+
 
 
 
