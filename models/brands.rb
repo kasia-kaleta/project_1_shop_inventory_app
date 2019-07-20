@@ -26,6 +26,13 @@ class Brand
     return result
   end
 
+  def update()
+    sql = "UPDATE brands SET (name, info) = ($1, $2)
+    WHERE id = $3"
+    values = [@name, @info, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
   def find(id)
     sql = "SELECT * FROM brands WHERE id = $1"
