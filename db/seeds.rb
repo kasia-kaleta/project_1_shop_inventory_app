@@ -35,3 +35,13 @@ brand4 = Brand.new({
   category1.save()
   category2.save()
   category3.save()
+
+  product1 = Product.new({
+    'name' => 'Volume Million Lashes Mascara',
+    'description' => 'Millionizer Brush - a multitude of bristles separate lashes for a fanned-out effect. Excess Wiper - in-built wiper system removes excess mascara, wiping brush free of clumps.',
+    'quantity' => 50,
+    'buying_cost' => 6.99,
+    'selling_price' => 10.99,
+    'brand_id' => brand2.id,
+    'category_id' => category2.id
+    })
