@@ -18,11 +18,18 @@ class Product
   end
 
   def save()
-    sql = "INSERT INTO categories (name, description, quantity, buying_cost, selling_price, brand_id, category_id)
+    sql = "INSERT INTO products (name, description, quantity, buying_cost, selling_price, brand_id, category_id)
     VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
     values = [@name, @description, @quantity, @buying_cost, @selling_price, @brand_id, @category_id, @id]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
+  end
+
+  def self.all()
+    sql = "SELECT * FROM products"
+    products = SqlRunner.run(sql)
+    result = products.map { |product| Product.new(product) }
+    return result
   end
 
 end
