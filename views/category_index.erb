@@ -1,0 +1,11 @@
+<h2>Categories</h2>
+
+<div id="category-wrapper">
+  <% @categories.each do |category| %>
+
+  <div class="category">
+    <h3><a href="/categories/<%= category.id %>"><%= category.name %></a></h3>
+  </div>
+
+  <% end %>
+</div>
