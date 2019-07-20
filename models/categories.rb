@@ -11,4 +11,11 @@ class Category
     @name = options['name']
   end
 
+  def save()
+    sql = "INSERT INTO brands (name) VALUES ($1) RETURNING id"
+    values = [@name, @id]
+    result = SqlRunner.run(sql, values)
+    @id = result.first['id']
+  end
+
 end
