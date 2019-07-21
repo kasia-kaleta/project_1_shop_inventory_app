@@ -15,3 +15,13 @@ end
 get '/brands/new' do
   erb(:'brands/new')
 end
+
+post '/brands' do
+  Brand.new(params).save
+  redirect to '/brands'
+end
+
+get '/brands/:id' do
+  @brand = Brand.find(params[:id])
+  erb(:'brands/show')
+end
