@@ -1,0 +1,12 @@
+<form action="/categories/<%= @category.id %>/edit" method="post">
+  <label for="category-name">Category Name: </label>
+  <input type="text" name="name" value="<%= @category.name %>">
+  <br>
+  <br>
+  <label for="description">Category Description: </label>
+  <textarea name="description" id="description" rows="6" cols="60"><%= @category.description %></textarea>
+  <br>
+  <br>
+  <input type="submit" value="Submit changes">
+
+</form>

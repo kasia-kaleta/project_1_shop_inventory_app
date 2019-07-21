@@ -1,4 +1,4 @@
-<form action="/brands" method="post">
+<form action="/brands/<%= @brand.id %>/edit" method="post">
   <label for="brand-name">Brand Name: </label>
   <input type="text" name="name" value="<%= @brand.name %>">
   <br>

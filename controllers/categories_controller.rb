@@ -25,3 +25,8 @@ get '/categories/:id' do
   @category = Brand.find(params[:id])
   erb(:'categories/show')
 end
+
+get '/categories/:id/edit' do
+  @category = Category.find(params[:id])
+  erb(:'categories/edit')
+end
