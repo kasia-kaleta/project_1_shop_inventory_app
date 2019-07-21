@@ -27,3 +27,10 @@ get '/products/:id' do
   @product = Product.find(params[:id])
   erb(:'products/show')
 end
+
+get '/products/:id/edit' do
+  @product = Product.find(params[:id])
+  @brands = Brand.all
+  @categories = Category.all
+  erb(:'products/edit')
+end

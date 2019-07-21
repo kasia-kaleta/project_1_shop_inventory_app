@@ -1,0 +1,41 @@
+<form action="/products <%= @product.id %>/edit" method="post">
+  <label for="product-name">Product Name: </label>
+  <input type="text" name="name" value="<%= @product.name %>">
+<br>
+<br>
+  <label for="brand-name">Brand: </label>
+  <select class="brand-select" name="brand">
+      <% @brands.each do |brand| %>
+      <option <%= "selected" if brand.id == @product.brand_id %> value="<%= brand.name %>"><%= brand.name %></option>
+      <% end %>
+  </select>
+<br>
+<br>
+  <label for="description">Product Description: </label>
+  <input type="text" name="description" value="<%= @product.description %>">
+  <br>
+  <br>
+
+  <label for="category-select">Select category: </label>
+  <select class="category-select" name="category">
+    <% @categories.each do |category| %>
+    <option <%= "selected" if category.id == @product.category_id %> value="<%= category.name %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <br>
+  <br>
+
+  <label for="quantity">Quantity: </label>
+  <input type="number" name="quantity" value="<%= @product.quantity %>">
+  <br>
+  <br>
+  <label for="buying-cost">Buying Cost: </label>
+  <input type="number" name="buying-cost" value="<%= @product.buying_cost %>">
+  <br>
+  <br>
+  <label for="selling-price">Selling Price: </label>
+  <input type="number" name="selling-price" value="<%= @product.selling_price %>">
+  <br>
+  <br>
+<input type="submit" value="Submit changes">
+</form>
