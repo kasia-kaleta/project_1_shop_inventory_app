@@ -6,7 +6,11 @@
 <br>
 <br>
   <label for="brand-name">Brand: </label>
-  <input type="text" name="brand" id="brand">
+  <select class="brand-select" name="brand">
+      <% @brands.each do |brand| %>
+      <option value="<%= brand.name %>"><%= brand.name %></option>
+      <% end %>
+  </select>
 <br>
 <br>
   <label for="description">Product Description: </label>
@@ -16,9 +20,9 @@
 
   <label for="category-select">Select category: </label>
   <select class="category-select" name="category">
-    <option value="Complexion">Complexion</option>
-    <option value="Eyes">Eyes</option>
-    <option value="Lips">Lips</option>
+    <% @categories.each do |category| %>
+    <option value="<%= category.name %>"><%= category.name %></option>
+    <% end %>
   </select>
   <br>
   <br>

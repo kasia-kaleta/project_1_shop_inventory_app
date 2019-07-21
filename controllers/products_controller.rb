@@ -13,5 +13,7 @@ get '/products' do
 end
 
 get '/products/new' do
+  @categories = Category.all
+  @brands = Brand.all
   erb(:'products/new')
 end
