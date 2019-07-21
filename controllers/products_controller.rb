@@ -34,3 +34,8 @@ get '/products/:id/edit' do
   @categories = Category.all
   erb(:'products/edit')
 end
+
+post 'products/:id/edit' do
+  Product.new(params).update
+  redirect to '/products'
+end
