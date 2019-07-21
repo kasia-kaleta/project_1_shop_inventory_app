@@ -35,3 +35,8 @@ post '/brands/:id/edit' do
   Brand.new(params).update
   redirect to '/brands'
 end
+
+post '/brands/:id/delete' do
+  Brand.delete(params[:id])
+  redirect to '/brands'
+end
