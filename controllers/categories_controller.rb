@@ -30,3 +30,13 @@ get '/categories/:id/edit' do
   @category = Category.find(params[:id])
   erb(:'categories/edit')
 end
+
+post '/categories/:id/edit' do
+  Category.new(params).update
+  redirect to '/categories'
+end
+
+post '/categories/:id/delete' do
+  Category.delete(params[:id])
+  redirect to '/categories'
+end
