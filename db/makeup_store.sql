@@ -12,7 +12,8 @@ CREATE TABLE brands (
 
 CREATE TABLE categories (
   id SERIAL4 PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  description VARCHAR(500)
 );
 
 CREATE TABLE products (

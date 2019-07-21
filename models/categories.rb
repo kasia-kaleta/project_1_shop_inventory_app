@@ -4,16 +4,17 @@ require_relative('../db/sql_runner')
 class Category
 
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :description
 
   def initialize(options)
     @id = options['id'].to_i if options
     @name = options['name']
+    @description = options['description']
   end
 
   def save()
-    sql = "INSERT INTO categories (name) VALUES ($1) RETURNING id"
-    values = [@name]
+    sql = "INSERT INTO categories (name, description) VALUES ($1, $2) RETURNING id"
+    values = [@name, @description]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
   end
@@ -26,9 +27,9 @@ class Category
   end
 
   def update()
-    sql = "UPDATE categories SET (name) = ($1)
-    WHERE id = $2"
-    values = [@name, @id]
+    sql = "UPDATE categories SET (name, description) = ($1, $2)
+    WHERE id = $3"
+    values = [@name, @description, @id]
     SqlRunner.run(sql, values)
   end
 
