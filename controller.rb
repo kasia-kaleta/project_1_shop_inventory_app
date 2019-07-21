@@ -14,3 +14,8 @@ get '/categories' do
   @categories = Category.all
   erb(:category_index)
 end
+
+get '/products' do
+  @products = Product.all
+  erb(:products_index)
+end

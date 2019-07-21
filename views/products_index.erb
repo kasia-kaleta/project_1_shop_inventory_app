@@ -1,0 +1,15 @@
+<h2>Products</h2>
+
+<div id="product-wrapper">
+  <% @products.each do |product| %>
+
+  <div class="product">
+    <h3><a href="/products/<%= product.id %>"><%= product.name %></a> </h3>
+    <p>Product Description: <%= product.description %></p>
+    <p>Quantity: <%= product.quantity %></p>
+    <p>Buying Cost: <%= product.buying_cost %></p>
+    <p>Selling Price: <%= product.selling_price %></p>
+  </div>
+
+  <% end %>
+</div>
