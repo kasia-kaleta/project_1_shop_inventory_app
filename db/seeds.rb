@@ -35,15 +35,15 @@ brand4 = Brand.new({
   brand4.save()
 
   category1 = Category.new({
-    'name' => 'complexion',
+    'name' => 'Complexion',
     'description' => 'This category contains face products like foundations, powders, blushes, bronzers, highlighters, etc.'})
 
   category2 = Category.new({
-    'name' => 'eyes',
+    'name' => 'Eyes',
     'description' => 'This category contains eye makeup products like mascaras, eye liners, eye shadows, eye brow pencils, etc.'})
 
   category3 = Category.new({
-    'name' => 'lips',
+    'name' => 'Lips',
     'description' => 'This category contains lip makeup products like lip liners, lipsticks, lip glosses, etc.'})
 
   category1.save()

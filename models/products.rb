@@ -13,8 +13,8 @@ class Product
     @quantity = options['quantity'].to_i
     @buying_cost = options['buying_cost'].to_f
     @selling_price = options['selling_price'].to_f
-    @brand_id = options['brand_id']
-    @category_id = options['category_id']
+    @brand_id = options['brand_id'].to_i
+    @category_id = options['category_id'].to_i
   end
 
   def save()
@@ -30,6 +30,13 @@ class Product
     products = SqlRunner.run(sql)
     result = products.map { |product| Product.new(product) }
     return result
+  end
+
+  def brand_name()
+    sql = "SELECT name FROM brands WHERE id = $1"
+    values = [@brand_id]
+    row = SqlRunner.run(sql, values).first
+    return row['name']
   end
 
   def update()
@@ -58,4 +65,10 @@ class Product
     return Product.new(result)
   end
 
+  def category_name()
+    sql = "SELECT name FROM categories WHERE id = $1"
+    values = [@category_id]
+    result = SqlRunner.run(sql, values).first
+    return result['name']
+  end
 end
