@@ -30,3 +30,8 @@ get '/brands/:id/edit' do
   @brand = Brand.find(params[:id])
   erb(:'brands/edit')
 end
+
+post '/brands/:id/edit' do
+  Brand.new(params).update
+  redirect to '/brands'
+end
