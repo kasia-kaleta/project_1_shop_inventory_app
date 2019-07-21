@@ -11,3 +11,7 @@ get '/brands' do
   @brands = Brand.all
   erb(:'brands/index')
 end
+
+get '/brands/new' do
+  erb(:'brands/new')
+end
