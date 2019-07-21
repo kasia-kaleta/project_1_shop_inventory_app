@@ -17,3 +17,13 @@ get '/products/new' do
   @brands = Brand.all
   erb(:'products/new')
 end
+
+post '/products' do
+  Product.new(params).save
+  redirect to '/products'
+end
+
+get '/products/:id' do
+  @product = Product.find(params[:id])
+  erb(:'products/show')
+end
