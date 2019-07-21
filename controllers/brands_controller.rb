@@ -9,5 +9,5 @@ also_reload('../models/*')
 
 get '/brands' do
   @brands = Brand.all
-  erb(:brand_index)
+  erb(:'brands/index')
 end

@@ -9,5 +9,5 @@ also_reload('../models/*')
 
 get '/categories' do
   @categories = Category.all
-  erb(:category_index)
+  erb(:'categories/index')
 end
