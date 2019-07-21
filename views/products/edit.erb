@@ -1,12 +1,12 @@
-<form action="/products <%= @product.id %>/edit" method="post">
+<form action="/products/<%= @product.id %>/edit" method="post">
   <label for="product-name">Product Name: </label>
   <input type="text" name="name" value="<%= @product.name %>">
 <br>
 <br>
   <label for="brand-name">Brand: </label>
-  <select class="brand-select" name="brand">
+  <select class="brand-select" name="brand_id">
       <% @brands.each do |brand| %>
-      <option <%= "selected" if brand.id == @product.brand_id %> value="<%= brand.name %>"><%= brand.name %></option>
+      <option <%= "selected" if brand.id == @product.brand_id %> value="<%= brand.id %>"><%= brand.name %></option>
       <% end %>
   </select>
 <br>
@@ -17,9 +17,9 @@
   <br>
 
   <label for="category-select">Select category: </label>
-  <select class="category-select" name="category">
+  <select class="category-select" name="category_id">
     <% @categories.each do |category| %>
-    <option <%= "selected" if category.id == @product.category_id %> value="<%= category.name %>"><%= category.name %></option>
+    <option <%= "selected" if category.id == @product.category_id %> value="<%= category.id %>"><%= category.name %></option>
     <% end %>
   </select>
   <br>
