@@ -1,0 +1,39 @@
+<h2>Add new product</h2>
+
+<form action="/products" method="post">
+  <label for="product-name">Product Name: </label>
+  <input type="text" name="name" id="name">
+<br>
+<br>
+  <label for="brand-name">Brand: </label>
+  <input type="text" name="brand" id="brand">
+<br>
+<br>
+  <label for="description">Product Description: </label>
+  <input type="text" name="description" id="description">
+  <br>
+  <br>
+
+  <label for="category-select">Select category: </label>
+  <select class="category-select" name="category">
+    <option value="Complexion">Complexion</option>
+    <option value="Eyes">Eyes</option>
+    <option value="Lips">Lips</option>
+  </select>
+  <br>
+  <br>
+
+  <label for="quantity">Quantity: </label>
+  <input type="number" name="quantity" id="quantity">
+  <br>
+  <br>
+  <label for="buying-cost">Buying Cost: </label>
+  <input type="number" name="buying-cost" id="buying_cost">
+  <br>
+  <br>
+  <label for="selling-price">Selling Price: </label>
+  <input type="number" name="selling-price" id="selling_price">
+  <br>
+  <br>
+<input type="submit" value="Add Product">
+</form>

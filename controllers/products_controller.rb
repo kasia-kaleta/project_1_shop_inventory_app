@@ -11,3 +11,7 @@ get '/products' do
   @products = Product.all
   erb(:'products/index')
 end
+
+get '/products/new' do
+  erb(:'products/new')
+end
