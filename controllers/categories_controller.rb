@@ -15,3 +15,13 @@ end
 get '/categories/new' do
   erb(:'categories/new')
 end
+
+post '/categories' do
+  Category.new(params).save
+  redirect to '/categories'
+end
+
+get '/categories/:id' do
+  @category = Brand.find(params[:id])
+  erb(:'categories/show')
+end
