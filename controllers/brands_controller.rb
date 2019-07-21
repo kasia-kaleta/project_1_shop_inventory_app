@@ -25,3 +25,8 @@ get '/brands/:id' do
   @brand = Brand.find(params[:id])
   erb(:'brands/show')
 end
+
+get '/brands/:id/edit' do
+  @brand = Brand.find(params[:id])
+  erb(:'brands/edit')
+end

@@ -1,0 +1,11 @@
+<form action="/brands" method="post">
+  <label for="brand-name">Brand Name: </label>
+  <input type="text" name="name" value="<%= @brand.name %>">
+  <br>
+  <br>
+  <label for="info">Brand Info: </label>
+  <textarea name="info" id="info" rows="8" cols="80"><%= @brand.info %></textarea>
+  <br>
+  <br>
+  <input type="submit" value="Submit changes">
+</form>
