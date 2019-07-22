@@ -3,8 +3,20 @@
 <nav>
   <h2>Inventory</h2>
 </nav>
+
+<form action="/index" method="post">
+  <label for="select">Filter by brand: </label>
+  <select class="select-search" name="brand_id">
+  <% @brands.each do |brand| %>
+    <option value="<%= brand.id %>"><%= brand.name %></option>
+  <% end %>
+
+    <input type="submit" value="Filter">
+
+  </select>
+</form>
 <table>
-  <% @product.each do |product| %>
+
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -16,6 +28,7 @@
     <th>Quantity</th>
     <th>Stock level</th>
   </tr>
+  <% @products.each do |product| %>
   <tr>
   <td><%= product.id %></td>
   <td><%= product.name %></td>

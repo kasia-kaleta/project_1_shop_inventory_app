@@ -73,4 +73,5 @@ class Product
     result = SqlRunner.run(sql, values).first
     return result['name']
   end
+
 end

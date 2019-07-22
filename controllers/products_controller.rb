@@ -19,8 +19,6 @@ get '/products/new' do
 end
 
 post '/products' do
-  p params
-
   Product.new(params).save
   redirect to '/products'
 end
