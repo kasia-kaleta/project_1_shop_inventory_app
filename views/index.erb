@@ -10,9 +10,9 @@
     <th>Name</th>
     <th>Brand</th>
     <th>Category</th>
-    <th>Description</th>
     <th>Buying Cost</th>
     <th>Selling Price</th>
+    <th>Markup</th>
     <th>Quantity</th>
     <th>Stock level</th>
   </tr>
@@ -21,14 +21,14 @@
   <td><%= product.name %></td>
   <td><%= product.brand_name %></td>
   <td><%= product.category_name %></td>
-  <td><%= product.description %></td>
   <td><%= product.buying_cost %></td>
   <td><%= product.selling_price %></td>
+   <td><%= (((product.selling_price) - (product.buying_cost)) / (product.buying_cost) * 100).round(2) %>%</td>
   <td><%= product.quantity %></td>
-  <td><%= if product.quantity < 40
+  <td><%= if product.quantity == 0
+    p "Out of stock"
+  elsif product.quantity < 10
     p "Low stock"
-  elsif product.quantity == 0
-  p "Out of stock"
   end
   %></td>
 
