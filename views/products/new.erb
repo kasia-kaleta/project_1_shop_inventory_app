@@ -8,7 +8,7 @@
   <label for="brand-name">Brand: </label>
   <select class="brand-select" name="brand_id">
       <% @brands.each do |brand| %>
-      <option value="<%= brand.name %>"><%= brand.name %></option>
+      <option value="<%= brand.id %>"><%= brand.name %></option>
       <% end %>
   </select>
 <br>
@@ -19,9 +19,9 @@
   <br>
 
   <label for="category-select">Select category: </label>
-  <select class="category-select" name="category">
+  <select class="category-select" name="category_id">
     <% @categories.each do |category| %>
-    <option value="<%= category.name %>"><%= category.name %></option>
+    <option value="<%= category.id %>"><%= category.name %></option>
     <% end %>
   </select>
   <br>

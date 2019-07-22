@@ -24,7 +24,7 @@ class Product
     VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
     values = [@name, @description, @quantity, @buying_cost, @selling_price, @brand_id, @category_id]
     result = SqlRunner.run(sql, values)
-    @id = result.first['id']
+    @id = result.first['id'].to_i
   end
 
   def self.all()

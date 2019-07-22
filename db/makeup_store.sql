@@ -20,8 +20,8 @@ CREATE TABLE products (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   description VARCHAR(500),
-  brand_id INT4 REFERENCES brands(id),
-  category_id INT4 REFERENCES categories(id),
+  brand_id INT4 REFERENCES brands(id) ON DELETE CASCADE,
+  category_id INT4 REFERENCES categories(id) ON DELETE CASCADE,
   quantity INT4,
   buying_cost DECIMAL,
   selling_price DECIMAL
