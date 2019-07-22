@@ -1,1 +1,30 @@
 <h1>Makeup Store Inventory App</h1>
+
+<nav>
+  <h2>Inventory</h2>
+</nav>
+<table>
+  <% @product.each do |product| %>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Brand</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Buying Cost</th>
+    <th>Selling Price</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+  <td><%= product.id %></td>
+  <td><%= product.name %></td>
+  <td><%= product.brand_name %></td>
+  <td><%= product.category_name %></td>
+  <td><%= product.description %></td>
+  <td><%= product.buying_cost %></td>
+  <td><%= product.selling_price %></td>
+  <td><%= product.quantity %></td>
+  </tr>
+
+  <% end %>
+</table>
