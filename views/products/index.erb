@@ -13,7 +13,9 @@
     <p>Buying Cost: <%= product.buying_cost %></p>
     <p>Selling Price: <%= product.selling_price %></p>
     <a href="/products/<%= product.id %>/edit">Edit</a>
-    <a href="/products/<%= product.id %>/delete">Delete</a>
+    <form action="/products/<%= product.id %>/delete" method="post">
+        <input type="submit" value="Delete">
+      </form>
   </div>
 
   <% end %>

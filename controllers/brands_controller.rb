@@ -37,6 +37,7 @@ post '/brands/:id/edit' do
 end
 
 post '/brands/:id/delete' do
-  Brand.delete(params[:id])
-  redirect to '/brands'
+  brand = Brand.find(params[:id])
+  brand.delete
+  redirect'/brands'
 end
