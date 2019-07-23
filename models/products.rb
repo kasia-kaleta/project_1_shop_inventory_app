@@ -80,6 +80,15 @@ class Product
     products = SqlRunner.run(sql, values)
     result = products.map { |product| Product.new(product) }
     return result
-
   end
+
+  def self.filter_by_category(id)
+    sql = "SELECT * FROM products WHERE category_id = $1"
+    values = [id]
+    products = SqlRunner.run(sql, values)
+    result = products.map { |product| Product.new(product) }
+    return result
+  end
+
+
 end
