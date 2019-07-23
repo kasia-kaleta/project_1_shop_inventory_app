@@ -7,9 +7,10 @@
 
   <div class="brand">
     <h3><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h3>
+    <p><img src="<%= brand.img %>" alt="Picture of logo"></p>
     <p>Brand Info: <%= brand.info %></p>
     <a href="/brands/<%= brand.id %>/edit">Edit</a>
-  
+
   </div>
 
   <% end %>

@@ -7,7 +7,8 @@ DROP TABLE categories;
 CREATE TABLE brands (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
-  info VARCHAR(500)
+  info VARCHAR(500),
+  img VARCHAR(255)
 );
 
 CREATE TABLE categories (

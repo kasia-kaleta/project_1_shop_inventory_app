@@ -4,17 +4,18 @@ require_relative('../db/sql_runner')
 class Brand
 
   attr_reader :id
-  attr_accessor :name, :info
+  attr_accessor :name, :info, :img
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @info = options['info']
+    @img = options['img']
   end
 
   def save()
-    sql = "INSERT INTO brands (name, info) VALUES ($1, $2) RETURNING id"
-    values = [@name, @info]
+    sql = "INSERT INTO brands (name, info, img) VALUES ($1, $2, $3) RETURNING id"
+    values = [@name, @info, @img]
     result = SqlRunner.run(sql, values)
     @id = result.first['id']
   end
@@ -27,9 +28,9 @@ class Brand
   end
 
   def update()
-    sql = "UPDATE brands SET (name, info) = ($1, $2)
-    WHERE id = $3"
-    values = [@name, @info, @id]
+    sql = "UPDATE brands SET (name, info, img) = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @info, @img, @id]
     SqlRunner.run(sql, values)
   end
 
