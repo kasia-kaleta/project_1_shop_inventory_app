@@ -37,8 +37,8 @@ class Product
   def brand_name()
     sql = "SELECT name FROM brands WHERE id = $1"
     values = [@brand_id]
-    row = SqlRunner.run(sql, values).first
-    return row['name']
+    result = SqlRunner.run(sql, values).first
+    return result['name']
   end
 
   def update()
@@ -74,4 +74,12 @@ class Product
     return result['name']
   end
 
+  def self.filter_by_brand(id)
+    sql = "SELECT * FROM products WHERE brand_id = $1"
+    values = [id]
+    products = SqlRunner.run(sql, values)
+    result = products.map { |product| Product.new(product) }
+    return result
+
+  end
 end

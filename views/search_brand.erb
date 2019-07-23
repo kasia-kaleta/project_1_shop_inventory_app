@@ -1,20 +1,4 @@
-<h1>Makeup Store Inventory App</h1>
 
-<nav>
-  <h2>Inventory</h2>
-</nav>
-
-<form action="/brands/filter" method="post">
-  <label for="brand-filter">Filter by brand: </label>
-  <select class="select-search" name="brand_id" id="brand_id">
-  <% @brands.each do |brand| %>
-    <option value="<%= brand.id %>"><%= brand.name %></option>
-  <% end %>
-
-    <input type="submit" value="Filter">
-
-  </select>
-</form>
 <table>
 
   <tr>
