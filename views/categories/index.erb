@@ -8,9 +8,7 @@
     <h3><a href="/categories/<%= category.id %>"><%= category.name %></a></h3>
     <p><%= category.description %></p>
     <a href="/categories/<%= category.id %>/edit">Edit</a>
-    <form action="/categories/<%= category.id %>/delete" method="post">
-        <input type="submit" value="Delete">
-      </form>
+  
   </div>
 
   <% end %>

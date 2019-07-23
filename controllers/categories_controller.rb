@@ -37,6 +37,6 @@ post '/categories/:id/edit' do
 end
 
 post '/categories/:id/delete' do
-  Category.delete(params[:id])
+  Category.find(params[:id]).delete
   redirect to '/categories'
 end

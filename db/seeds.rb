@@ -17,6 +17,7 @@ brand1 = Brand.new({
 brand2 = Brand.new({
   'name' => 'LOreal Paris',
   'info' => 'LOréal S.A. is a French personal care company headquartered in Clichy, Hauts-de-Seine with a registered office in Paris. It is the worlds largest cosmetics company and has developed activities in the field concentrating on hair colour, skin care, sun protection, make-up, perfume, and hair care.'
+  # 'img' => '/image_name.png'
   })
 
 brand3 = Brand.new({

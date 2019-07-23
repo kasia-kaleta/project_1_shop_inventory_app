@@ -41,6 +41,6 @@ post '/products/:id/edit' do
 end
 
 post '/products/:id/delete' do
-  Product.delete(params[:id])
+  Product.find(params[:id]).delete
   redirect to '/products'
 end
