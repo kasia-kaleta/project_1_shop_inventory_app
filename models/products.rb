@@ -89,6 +89,7 @@ class Product
     result = products.map { |product| Product.new(product) }
     return result
   end
+  
 
 
 end

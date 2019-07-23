@@ -5,16 +5,28 @@
 </nav>
 
 <form action="/brands/filter" method="post">
-  <label for="brand-filter">Filter by brand: </label>
+  <label for="brand-filter">Filter by brand:
+  </label>
   <select class="select-search" name="brand_id" id="brand_id">
-  <% @brands.each do |brand| %>
-    <option value="<%= brand.id %>"><%= brand.name %></option>
-  <% end %>
-
-    <input type="submit" value="Filter">
-
+    <% @brands.each do |brand| %>
+      <option value="<%= brand.id %>"><%= brand.name %></option>
+    <% end %>
   </select>
+  <input type="submit" value="Filter">
 </form>
+
+<form action="categories/filter" method="post">
+  <label for="category-filter">Filter by category:
+  </label>
+  <select class="select-search" name="category_id" id="category_id">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Filter">
+
+</form>
+
 <table>
 
   <tr>
@@ -29,22 +41,19 @@
     <th>Stock level</th>
   </tr>
   <% @products.each do |product| %>
-  <tr>
-  <td><%= product.id %></td>
-  <td><%= product.name %></td>
-  <td><%= product.brand_name %></td>
-  <td><%= product.category_name %></td>
-  <td><%= product.buying_cost %></td>
-  <td><%= product.selling_price %></td>
-   <td><%= (((product.selling_price) - (product.buying_cost)) / (product.buying_cost) * 100).round(2) %>%</td>
-  <td><%= product.quantity %></td>
-  <td><%= if product.quantity == 0
-    p "Out of stock"
-  elsif product.quantity < 10
-    p "Low stock"
-  end
-  %></td>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.brand_name %></td>
+      <td><%= product.category_name %></td>
+      <td><%= product.buying_cost %></td>
+      <td><%= product.selling_price %></td>
+      <td><%= (((product.selling_price) - (product.buying_cost)) / (product.buying_cost) * 100).round(2) %>%</td>
+      <td><%= product.quantity %></td>
+      <td><%= if product.quantity == 0
+        p "Out of stock"
+        elsif product.quantity < 10
+        p "Low stock" end %></td>
 
-
-  <% end %>
-</table>
+    <% end %>
+  </table>
