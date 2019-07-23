@@ -54,7 +54,7 @@ product1 = Product.new({
     'name' => 'Volume Million Lashes Mascara',
     'description' => 'Millionizer Brush - a multitude of bristles separate lashes for a fanned-out effect. Excess Wiper - in-built wiper system removes excess mascara, wiping brush free of clumps.',
     'quantity' => 50,
-    'buying_cost' => 6.99,
+    'buying_cost' => 8.70,
     'selling_price' => 10.99,
     'brand_id' => brand2.id,
     'category_id' => category2.id
@@ -64,47 +64,47 @@ product2 = Product.new({
     'name' => 'Hoola Bronzer',
     'description' => 'Bronzing powder Hoola is the perfect contour shade to acomplish sun-kissed glow. Great for contouring, soft, natural-bristle brush included.',
     'quantity' => 20,
-    'buying_cost' => 17.00,
+    'buying_cost' => 22.20,
     'selling_price' => 26.00,
     'brand_id' => brand1.id,
     'category_id' => category1.id
     })
 
 product3 = Product.new({
-    'name' => 'Precisely, My Brow pencil',
-    'description' => 'Waterproof mechanical eyebrow pencil with twist-up tip and built-in spoolie.',
-    'quantity' => 5,
-    'buying_cost' => 14.50,
-    'selling_price' => 21.50,
-    'brand_id' => brand1.id,
-    'category_id' => category2.id
+  'name' => 'Wonder Luxe Volume Mascara',
+  'description' => 'Conditioning mascara,infused with argan, maracuja, marula & camellia oils.Smudge-proof formula, dermatologist & ophthalmologist tested',
+  'quantity' => 50,
+  'buying_cost' => 6.12,
+  'selling_price' => 8.99,
+  'brand_id' => brand4.id,
+  'category_id' => category2.id
     })
 
 product4 = Product.new({
     'name' => 'Studio Fix Fluid Foundation',
     'description' => 'The oil-free foundation offers a shine-control base with a broad spectrum UVA /UVB SPF 15 and PA++ protection.',
     'quantity' => 50,
-    'buying_cost' => 19.50,
+    'buying_cost' => 23.90,
     'selling_price' => 27.00,
     'brand_id' => brand3.id,
     'category_id' => category1.id
       })
 
 product5 = Product.new({
-    'name' => 'Wonder Luxe Volume Mascara',
-    'description' => 'Conditioning mascara,infused with argan, maracuja, marula & camellia oils.Smudge-proof formula, dermatologist & ophthalmologist tested',
-    'quantity' => 50,
-    'buying_cost' => 4.20,
-    'selling_price' => 8.99,
-    'brand_id' => brand4.id,
-    'category_id' => category2.id
+  'name' => 'Precisely, My Brow pencil',
+  'description' => 'Waterproof mechanical eyebrow pencil with twist-up tip and built-in spoolie.',
+  'quantity' => 5,
+  'buying_cost' => 17.80,
+  'selling_price' => 21.50,
+  'brand_id' => brand1.id,
+  'category_id' => category2.id
         })
 
 product6 = Product.new({
     'name' => 'Ruby Woo Lipstick',
     'description' => 'The iconic product that made M·A·C famous. This creamy rich formula features high colour payoff in a no-shine matte finish.',
     'quantity' => 30,
-    'buying_cost' => 14.20,
+    'buying_cost' => 15.20,
     'selling_price' => 17.50,
     'brand_id' => brand3.id,
     'category_id' => category3.id
