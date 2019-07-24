@@ -1,18 +1,19 @@
 <link rel="stylesheet" href="/styles/structure.css">
 
-
 <h2>Categories</h2>
 
 <a href="/categories/new">Add new Category</a>
-<div id="category-wrapper">
+<div class="page">
+
+<div class="category-wrapper">
   <% @categories.each do |category| %>
 
   <div class="category">
     <h3><a href="/categories/<%= category.id %>"><%= category.name %></a></h3>
     <p><%= category.description %></p>
     <a href="/categories/<%= category.id %>/edit">Edit</a>
-
   </div>
 
   <% end %>
+</div>
 </div>

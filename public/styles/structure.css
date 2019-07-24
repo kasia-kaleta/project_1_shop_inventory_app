@@ -1,4 +1,4 @@
-.header h1, nav{
+.header h1, nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,14 +16,50 @@ h2, p, a {
   font-family: 'Antic Slab', serif;
 }
 
+.brand-logo {
+  width: 100px;
+}
+
 .product-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
+
+.brand-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+
+
 .product {
   width: 20%;
   margin-left: 5px;
   box-sizing: border-box;
+}
+
+.category {
+  width: 20%;
+  margin-left: 5px;
+  box-sizing: border-box;
+}
+
+.brand {
+  width: 20%;
+  margin-left: 5px;
+  box-sizing: border-box;
+}
+
+a:link {
+  color: slateblue;
+  text-decoration: none;
+
 }

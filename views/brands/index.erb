@@ -3,14 +3,14 @@
 
 <h2>Brands</h2>
 
-<div id="brand-wrapper">
+<a href="/brands/new">Add new brand</a>
+<div class="brand-wrapper">
 
-  <a href="/brands/new">Add new brand</a>
   <% @brands.each do |brand| %>
 
   <div class="brand">
     <h3><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h3>
-    <p><img src="<%= brand.img %>" alt="Picture of logo"></p>
+    <img class="brand-logo" src="<%= brand.img %>" alt="Picture of logo" />
     <p>Brand Info: <%= brand.info %></p>
     <a href="/brands/<%= brand.id %>/edit">Edit</a>
 
