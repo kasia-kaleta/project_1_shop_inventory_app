@@ -4,11 +4,14 @@ table {
   border-collapse: collapse;
   table-layout: auto;
   text-align: center;
+
 }
 
 th, td {
   border: 1px solid black;
   padding: 15px;
+  font-family: 'Antic Slab', serif;
+;
 }
 
 tr:hover {

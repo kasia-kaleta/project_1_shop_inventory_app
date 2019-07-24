@@ -1,7 +1,12 @@
+<link rel="stylesheet" href="/styles/structure.css">
+
 <h2>Products</h2>
 
 <a href="/products/new">Add new Product</a>
-<div id="product-wrapper">
+<div class="page">
+
+
+<div class="product-wrapper">
   <% @products.each do |product| %>
 
   <div class="product">
@@ -19,4 +24,5 @@
   </div>
 
   <% end %>
+</div>
 </div>
