@@ -22,7 +22,7 @@ post '/categories' do
 end
 
 get '/categories/:id' do
-  @category = Brand.find(params[:id])
+  @category = Category.find(params[:id])
   erb(:'categories/show')
 end
 
