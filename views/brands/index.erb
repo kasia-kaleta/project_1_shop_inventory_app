@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="/styles/structure.css">
-
+<link href="https://fonts.googleapis.com/css?family=Lustria&display=swap" rel="stylesheet">
 
 <h2>Brands</h2>
-
-<a href="/brands/new">Add new brand</a>
+<a class="add-new-button" href="/brands/new">Add new Brand</a>
 <div class="brand-wrapper">
 
   <% @brands.each do |brand| %>
@@ -12,7 +11,7 @@
     <h3><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h3>
     <img class="brand-logo" src="<%= brand.img %>" alt="Picture of logo" />
     <p>Brand Info: <%= brand.info %></p>
-    <a href="/brands/<%= brand.id %>/edit">Edit</a>
+    <a class="edit-button" href="/brands/<%= brand.id %>/edit">Edit</a>
 
   </div>
 

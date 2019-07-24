@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/styles/structure.css">
+<link href="https://fonts.googleapis.com/css?family=Lustria&display=swap" rel="stylesheet">
 
 <h2>Categories</h2>
-
-<a href="/categories/new">Add new Category</a>
+<a class="add-new-button" href="/categories/new">Add new Category</a>
 <div class="page">
 
 <div class="category-wrapper">
@@ -11,7 +11,7 @@
   <div class="category">
     <h3><a href="/categories/<%= category.id %>"><%= category.name %></a></h3>
     <p><%= category.description %></p>
-    <a href="/categories/<%= category.id %>/edit">Edit</a>
+    <a class="edit-button" href="/categories/<%= category.id %>/edit">Edit</a>
   </div>
 
   <% end %>

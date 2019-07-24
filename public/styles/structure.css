@@ -1,9 +1,39 @@
-.header h1, nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: 'Antic Slab', serif;
+body
+{
+  background: #e6faf7;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Antic Slab', serif;
+  font-size: 25px;
+  color: #009BCC;
+  background-color: #AFEEEE;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.menu-item:hover {
+  background-color: #adccc9;
+}
+
 
 h2 {
   display: flex;
@@ -38,8 +68,6 @@ h2, p, a {
   justify-content: space-around;
 }
 
-
-
 .product {
   width: 20%;
   margin-left: 5px;
@@ -61,5 +89,28 @@ h2, p, a {
 a:link {
   color: slateblue;
   text-decoration: none;
+  color: steelblue;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+}
 
+a.edit-button {
+  font-family: 'Lustria', serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #cededc;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+a.edit-button:hover {
+  background-color: #adccc9;
+}
+
+a.add-new-button {
+  padding: 1em 1.5em;
+  background-color: #cededc;
+}
+a.add-new-button:hover {
+  background-color: #adccc9;
 }

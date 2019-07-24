@@ -2,25 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Makeup Store</title>
+    <title>Makeup Store Inventory App</title>
     <link rel="stylesheet" href="/styles/structure.css">
     <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Crimson+Text&display=swap" rel="stylesheet">
   </head>
   <body>
   <div class="header">
-    <div>
-      <h1>Makeup Store Inventory App</h1>
+    <div class="header-title">
+      <img src="../images/logo.png" />
     </div>
-    <br>
-    <div>
-    <nav id="menu">
-      <li><a href="/">Inventory</a></li>
-      <li><a href=/products>Products</a></li>
-      <li><a href=/brands>Brands</a></li>
-      <li><a href=/categories>Categories</a></li>
-    </nav>
+    <div class="menu">
+      <div class="menu-item"><a href="/">INVENTORY</a></div>
+      <div class="menu-item"><a href=/products>PRODUCTS</a></div>
+      <div class="menu-item"><a href=/brands>BRANDS</a></div>
+      <div class="menu-item"><a href=/categories>CATEGORIES</a></div>
     </div>
     </div>
+
     <%= yield %>
 
   </body>

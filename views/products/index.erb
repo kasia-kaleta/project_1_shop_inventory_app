@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/styles/structure.css">
+<link href="https://fonts.googleapis.com/css?family=Lustria&display=swap" rel="stylesheet">
 
 <h2>Products</h2>
-
-<a href="/products/new">Add new Product</a>
+<a class="add-new-button" href="/products/new">Add new Product</a>
 <div class="page">
 
 <div class="product-wrapper">
@@ -16,7 +16,7 @@
     <p>Quantity: <%= product.quantity %></p>
     <p>Buying Cost: <%= product.buying_cost %></p>
     <p>Selling Price: <%= product.selling_price %></p>
-    <a href="/products/<%= product.id %>/edit">Edit</a>
+    <a class="edit-button" href="/products/<%= product.id %>/edit">Edit</a>
     <form action="/products/<%= product.id %>/delete" method="post">
         <input type="submit" value="Delete">
       </form>
