@@ -19,7 +19,7 @@
 <br>
 
 <form action="categories/filter" method="post">
-  <label for="category-filter">Filter by category: 
+  <label for="category-filter">Filter by category:
   </label>
   <select class="select-search" name="category_id" id="category_id">
     <% @categories.each do |category| %>
@@ -36,7 +36,7 @@
 <table>
 
   <tr>
-    <th>ID</th>
+    
     <th>Name</th>
     <th>Brand</th>
     <th>Category</th>
@@ -48,7 +48,7 @@
   </tr>
   <% @products.each do |product| %>
     <tr>
-      <td><%= product.id %></td>
+
       <td><%= product.name %></td>
       <td><%= product.brand_name %></td>
       <td><%= product.category_name %></td>

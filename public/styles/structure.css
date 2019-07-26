@@ -3,6 +3,7 @@ body
   background: #e6faf7;
 }
 
+
 .header {
   display: flex;
   flex-direction: column;
@@ -42,8 +43,13 @@ h2 {
   font-family: 'Antic Slab', serif;
 }
 
-h2, p, a {
+h2, p {
   font-family: 'Antic Slab', serif;
+}
+
+a {
+  font-family: 'Antic Slab', serif;
+  color: steelblue;
 }
 
 .brand-logo {
